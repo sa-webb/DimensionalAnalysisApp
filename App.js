@@ -3,7 +3,7 @@ import { StyleSheet, Button, Text, View, TouchableHighlight } from 'react-native
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import ReferenceScreen from './views/ReferenceScreen';
-import FlatList from './components/FlatList';
+import FlatList from './views/FlatList';
 
 import Buttons from './components/Buttons';
 
@@ -14,22 +14,52 @@ import ChemScreen from './views/tutorials/ChemScreen';
 class HomeScreen extends React.Component {
 
   static navigationOptions = {
-    title: 'UTC Dimension Analysis',
+    title: 'DASH - An Educational App',
 };
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#e0aa0f'}}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
 
+        {/*Guide Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('List') } underlayColor="white">
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Tutorials List</Text>
+            <Text style={styles.buttonText}>Guide</Text>
           </View>
         </TouchableHighlight>
-        
+
+        {/*Learn Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('List') } underlayColor="white">
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Learn</Text>
+          </View>
+        </TouchableHighlight>
+
+        {/*Play Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Play</Text>
+          </View>
+        </TouchableHighlight>
+
+        {/*Practice Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Practice</Text>
+          </View>
+        </TouchableHighlight>
+
+        {/*References Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>References</Text>
+          </View>
+        </TouchableHighlight>
+
+        {/*Measure On Your Own Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+          <View>
+            <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
           </View>
         </TouchableHighlight>
 
@@ -58,12 +88,12 @@ const RootStack = createStackNavigator(
 
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#00386b',
+        backgroundColor: 'black',
       },
-      headerTintColor: '#e0aa0f',
+      headerTintColor: 'black',
       headerTitleStyle: {
         fontWeight: 'bold',
-        color: '#e0aa0f',
+        color: 'white',
       },
     },
   }
@@ -82,11 +112,11 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: '#00386b'
+    backgroundColor: 'white'
   },
   buttonText: {
     fontSize: 20,
     padding: 20,
-    color: '#e0aa0f'
+    color: 'blue'
   }
 });
