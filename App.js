@@ -1,14 +1,23 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, TouchableHighlight } from 'react-native';
+import { StyleSheet, Button, Text, View, TouchableHighlight, Linking } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
-import ReferenceScreen from './views/ReferenceScreen';
+
 import FlatList from './views/FlatList';
 
 import Buttons from './components/Buttons';
 
-import ProductFetch from './views/ProductFetch';
+import GuideScreen from './views/GuideScreen';
 
+import LearnScreen from './views/LearnScreen';
+
+import PlayScreen from './views/PlayScreen';
+
+import PracticeScreen from './views/PracticeScreen';
+
+import ReferenceScreen from './views/ReferenceScreen';
+
+import ProductFetch from './views/ProductFetch';
 import ChemScreen from './views/tutorials/ChemScreen';
 
 class HomeScreen extends React.Component {
@@ -22,28 +31,28 @@ class HomeScreen extends React.Component {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
 
         {/*Guide Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('List') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Guide</Text>
           </View>
         </TouchableHighlight>
 
         {/*Learn Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('List') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Learn</Text>
           </View>
         </TouchableHighlight>
 
         {/*Play Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Play</Text>
           </View>
         </TouchableHighlight>
 
         {/*Practice Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Practice</Text>
           </View>
@@ -57,7 +66,7 @@ class HomeScreen extends React.Component {
         </TouchableHighlight>
 
         {/*Measure On Your Own Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+        <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="white">
           <View>
             <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
           </View>
@@ -77,7 +86,10 @@ class HomeScreen extends React.Component {
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
-    List: FlatList,
+    Guide: GuideScreen,
+    Learn: LearnScreen,
+    Play: PlayScreen,
+    Practice: PracticeScreen,
     Reference: ReferenceScreen,
     Fetch: ProductFetch,
     Button: Buttons,
