@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Button, Text, View, TouchableHighlight } from 'react-native';
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation'; 
+import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import ReferenceScreen from './views/ReferenceScreen';
 import FlatList from './components/FlatList';
@@ -20,16 +20,19 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#e0aa0f'}}>
+
         <TouchableHighlight onPress={() => this.props.navigation.navigate('List') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Tutorials List</Text>
           </View>
         </TouchableHighlight>
+        
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
           <View style={styles.button}>
             <Text style={styles.buttonText}>References</Text>
           </View>
         </TouchableHighlight>
+
       </View>
     );
   }
