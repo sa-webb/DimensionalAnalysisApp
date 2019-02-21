@@ -31,42 +31,42 @@ class HomeScreen extends React.Component {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
 
         {/*Guide Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="blue">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Guide</Text>
           </View>
         </TouchableHighlight>
 
         {/*Learn Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') } underlayColor="blue">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Learn</Text>
           </View>
         </TouchableHighlight>
 
         {/*Play Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') } underlayColor="blue">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Play</Text>
           </View>
         </TouchableHighlight>
 
         {/*Practice Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') } underlayColor="blue">
           <View style={styles.button}>
             <Text style={styles.buttonText}>Practice</Text>
           </View>
         </TouchableHighlight>
 
         {/*References Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="blue">
           <View style={styles.button}>
             <Text style={styles.buttonText}>References</Text>
           </View>
         </TouchableHighlight>
 
         {/*Measure On Your Own Button*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="white">
+        <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="blue">
           <View>
             <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
           </View>

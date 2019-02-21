@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { View, Image, ScrollView, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { View, Image, ScrollView, Text, StyleSheet, Button, TouchableHighlight} from 'react-native';
+import Buttons from '../components/Buttons';
+import Home from '../App.js'
+
+{/*This allows you to bold like you do in HTML*/}
+const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 export default class ReferenceScreen extends Component {
 
@@ -14,10 +19,9 @@ export default class ReferenceScreen extends Component {
     render() {
         return (
             <ScrollView style={styles.contentContainer}>
-                <View>
-                    
+                <View style={styles.container}>
                     <Text style={styles.subtitleContainer}>
-                        Length
+                        <B>Length</B>
                     </Text>
 
                     <Text style={styles.subcontentContainer}>
@@ -32,9 +36,10 @@ export default class ReferenceScreen extends Component {
                         1 yard = 91.44cm = 0.9144m
                     </Text>
 
+                    <Text></Text>
 
                     <Text style={styles.subtitleContainer}>
-                        Area
+                        <B>Area</B>
                     </Text>
 
                     <Text style={styles.subcontentContainer}>
@@ -49,8 +54,10 @@ export default class ReferenceScreen extends Component {
                         1 acre = 0.4047 hectares = 4047 m^2
                     </Text>
 
+                    <Text></Text>
+
                     <Text style={styles.subtitleContainer}>
-                        Temperature
+                        <B>Temperature</B>
                     </Text>
 
                     <Text style={styles.subcontentContainer}>
@@ -69,8 +76,10 @@ export default class ReferenceScreen extends Component {
                         K = C + 273.15
                     </Text>
 
+                    <Text></Text>
+
                     <Text style={styles.subtitleContainer}>
-                        Volume
+                        <B>Volume</B>
                     </Text>
 
                     <Text style={styles.subcontentContainer}>
@@ -98,7 +107,11 @@ export default class ReferenceScreen extends Component {
                     </Text>
 
                     <Text style={styles.subtitleContainer}>
-                        Weight
+
+                    <Text></Text>
+                    <Text></Text>
+
+                        <B>Weight</B>
                     </Text>
 
                     <Text style={styles.subcontentContainer}>
@@ -112,16 +125,30 @@ export default class ReferenceScreen extends Component {
                     <Text style={styles.subcontentContainer}>
                         1 imp ton = 1016kg
                     </Text>
+
+                    <Text></Text>
                     <Text></Text>
 
-                </View>
+                    {/*Guide Button*/}
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
+                      <View style={buttonStyles.button}>
+                        <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
+                      </View>
+                    </TouchableHighlight>
 
+              </View>
             </ScrollView>
         )
     }
 }
 
 const styles = StyleSheet.create({
+    container: {
+     flex: 1,
+     alignItems: 'center',
+     backgroundColor: 'black',
+     paddingTop: 22
+    },
     titleContainer: {
         textAlign: 'center',
         fontSize: 24,
@@ -129,41 +156,57 @@ const styles = StyleSheet.create({
         // backgroundColor: '#9842f4',
     },
     labelContainer: {
-        textAlign: 'left',
+        textAlign: 'center',
         fontSize: 28,
-        color: '#00386b',
+        color: 'white',
     },
     contentContainer: {
         paddingVertical: 10,
-        backgroundColor: '#e0aa0f',
+        backgroundColor: 'black',
     },
     subtitleContainer: {
-        textAlign: 'left',
+        textAlign: 'center',
         fontSize: 22,
-        color: '#00386b',
+        color: 'white',
         paddingHorizontal: 12,
         paddingVertical: 8,
     },
     subcontentContainer: {
-        textAlign: 'left',
+        textAlign: 'center',
         fontSize: 16,
-        color: '#00386b',
+        color: 'white',
         paddingHorizontal: 5,
         paddingVertical: 2
     },
     safeArea: {
         flex: 1,
-        backgroundColor: '#FF5236'
+        backgroundColor: 'white'
     },
     button: {
         marginBottom: 50,
         width: 260,
         alignItems: 'center',
-        backgroundColor: '#00386b'
+        backgroundColor: 'white',
+        flex:1,
+        justifyContent:'center'
     },
     buttonText: {
         padding: 20,
-        color: '#00386b'
+        color: 'white'
     },
 
+});
+
+const buttonStyles = StyleSheet.create({
+  button: {
+    marginBottom: 30,
+    width: 260,
+    alignItems: 'center',
+    backgroundColor: 'white'
+  },
+  buttonText: {
+    fontSize: 20,
+    padding: 20,
+    color: 'blue'
+  }
 });

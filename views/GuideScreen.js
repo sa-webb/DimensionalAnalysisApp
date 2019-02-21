@@ -9,20 +9,27 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 export default class FlatListBasics extends Component {
 
   static navigationOptions = {
-    title: 'Guide',
+    title: 'DASH - An Educational App',
 };
 
   render() {
     return (
       <View style={styles.container}>
 
-        <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}> <B>DASH is broken down into three
-        main components:</B></Text>
+        <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>
+          <B>GUIDE</B>
+        </Text>
 
-        <Text></Text>
         <Text> </Text>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}> <B>1. Learn - </B>
+        <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+          <B>DASH is broken down into three main components:</B>
+        </Text>
+
+        <Text> </Text>
+
+        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+          <B>1. Learn - </B>
           This section provides
           step-by-step tutorials for understanding how to solve dimensional
           analysisproblems
@@ -30,7 +37,8 @@ export default class FlatListBasics extends Component {
 
         <Text></Text>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}> <B>2. Play - </B>
+        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+          <B>2. Play - </B>
           This section features a 2D
           platformer game that tests your ability to convert different units
           using dimensional analysis, and then reason which of the two displayed
@@ -39,16 +47,15 @@ export default class FlatListBasics extends Component {
 
         <Text></Text>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}> <B>3. Practice - </B>
-         This section features a
-         variety of questions asked in the form of short answer.
+        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+          <B>3. Practice - </B>
+          This section features a
+          variety of questions asked in the form of short answer.
         </Text>
 
         <Text></Text>
-        <Text></Text>
-        <Text></Text>
 
-        {/*Guide Button*/}
+        {/*Return to Main Menu Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
           <View style={buttonStyles.button}>
             <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
