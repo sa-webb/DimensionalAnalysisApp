@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, StyleSheet, Text, Image, View, TextInput, TouchableHighlight } from 'react-native';
+import { FlatList, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import Buttons from '../components/Buttons';
 import Home from '../App.js'
 
@@ -9,14 +9,8 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 export default class FlatListBasics extends Component {
 
   static navigationOptions = {
-    title: 'PRACTICE',
+    title: 'PROBLEM ONE',
 };
-
-  /*constructor for textbox*/
-  constructor(props) {
-    super(props);
-    this.state = { text: 'Enter Answer Here' }
-  }
 
   render() {
     return (
@@ -24,39 +18,46 @@ export default class FlatListBasics extends Component {
 
       {/*
         <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>
-          <B>GUIDE</B>
+          <B>LEARN</B>
         </Text>
       */}
 
-        {/*WE SHOULD MAKE THIS A FETCH EVENTUALLY*/}
-        {/*Practice Question*/}
-        <Image source={require('../PracticeQuestion.png')}
-          style={{ width: 350 }}
-          resizeMode="contain"
-        />
-
-        <View style={{flexDirection:'row'}}>
-            <View>
-              <TextInput
-                  style={{alignItems:'center',justifyContent:'center',backgroundColor:'white'}}
-                  onChangeText = {(text) => this.setState({text})}
-                  value = {this.state.text}
-                  keyboardType = 'web-search'
-                  />
-            </View>
-        </View>
-
+        <Text></Text>
         <Text></Text>
 
-        {/*Submits Answer*/}
+        <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+          Click <B>Start</B> to begin walking through different
+          dimensional analysis problems:
+        </Text>
+
+        <Text></Text>
+        <Text></Text>
+
+        {/*Start Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
           <View style={buttonStyles.button}>
-            <Text style={buttonStyles.buttonText}>Submit Answer</Text>
+            <Text style={buttonStyles.buttonText}>Start</Text>
           </View>
         </TouchableHighlight>
 
-        <Text></Text>
-        <Text></Text>
+        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+          For each problem, use the <B>Next</B> button to step through
+          each part of solving it.
+        </Text>
+
+        {/*Prev Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+          <View style={buttonStyles.button}>
+            <Text style={buttonStyles.buttonText}>Previous Step</Text>
+          </View>
+        </TouchableHighlight>
+
+        {/*Next Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+          <View style={buttonStyles.button}>
+            <Text style={buttonStyles.buttonText}>Next Step</Text>
+          </View>
+        </TouchableHighlight>
 
         {/*Return to Main Menu Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 24,
     height: 44,
-  }
+  },
 })
 
 const buttonStyles = StyleSheet.create({

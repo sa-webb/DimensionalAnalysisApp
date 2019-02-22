@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, Image, TouchableHighlight, Linking } from 'react-native';
+import { StyleSheet, Button, Text, View, Image, ScrollView, TouchableHighlight, Linking } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 
@@ -29,53 +29,61 @@ class HomeScreen extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
 
-        <Image source={require('./iPhoneLogo.png')} />
+      <ScrollView style={styles.contentContainer}>
 
-        {/*Guide Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="blue">
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Guide</Text>
-          </View>
-        </TouchableHighlight>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
 
-        {/*Learn Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') } underlayColor="blue">
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Learn</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Logo*/}
+          <Image source={require('./iPhoneLogo.png')} />
 
-        {/*Play Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') } underlayColor="blue">
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Play</Text>
-          </View>
-        </TouchableHighlight>
+          <Text></Text>
+          <Text></Text>
 
-        {/*Practice Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') } underlayColor="blue">
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>Practice</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Guide Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="blue">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Guide</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*References Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="blue">
-          <View style={styles.button}>
-            <Text style={styles.buttonText}>References</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Learn Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') } underlayColor="blue">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Learn</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Measure On Your Own Button*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="blue">
-          <View>
-            <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Play Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') } underlayColor="blue">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Play</Text>
+            </View>
+          </TouchableHighlight>
 
-      </View>
+          {/*Practice Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') } underlayColor="blue">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Practice</Text>
+            </View>
+          </TouchableHighlight>
+
+          {/*References Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="blue">
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>References</Text>
+            </View>
+          </TouchableHighlight>
+
+          {/*Measure On Your Own Button*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
+            </View>
+          </TouchableHighlight>
+
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -133,5 +141,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     padding: 20,
     color: 'blue'
+  },
+  contentContainer: {
+      paddingVertical: 10,
+      backgroundColor: 'black',
   }
 });
