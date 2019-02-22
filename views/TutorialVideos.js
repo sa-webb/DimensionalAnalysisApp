@@ -28,21 +28,21 @@ export default class FlatListBasics extends Component {
           </Text>
 
           {/*Scientific Calculator*/}
-          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Scientific Calculator</Text>
             </View>
           </TouchableHighlight>
 
           {/*Significant Figures*/}
-          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Significant Figures</Text>
             </View>
           </TouchableHighlight>
 
           {/*Scientific Notation*/}
-          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Scientific Notation</Text>
             </View>
@@ -56,21 +56,21 @@ export default class FlatListBasics extends Component {
           </Text>
 
           {/*Stoichiometry Introduction*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Stoichiometry Introduction</Text>
             </View>
           </TouchableHighlight>
 
           {/*Stoichiometry Example 1*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Stoichiometry Example 1</Text>
             </View>
           </TouchableHighlight>
 
           {/*Stoichiometry Example 2*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-2') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-2') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Stoichiometry Example 2</Text>
             </View>
@@ -84,21 +84,21 @@ export default class FlatListBasics extends Component {
           </Text>
 
           {/*Dimensional Analysis Example 1*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Dimensional Analysis Example 1</Text>
             </View>
           </TouchableHighlight>
 
           {/*Dimensional Analysis Example 2*/}
-          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Dimensional Analysis Example 2</Text>
             </View>
           </TouchableHighlight>
 
           {/*Unit Conversions*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=3VnPVGGYSvI') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=3VnPVGGYSvI') } underlayColor="white">
             <View>
               <Text style={styles.buttonText}>Unit Conversions</Text>
             </View>
@@ -108,7 +108,7 @@ export default class FlatListBasics extends Component {
           <Text></Text>
 
           {/*Return to Main Menu Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
             <View style={buttonStyles.button}>
               <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
             </View>

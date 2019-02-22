@@ -32,14 +32,14 @@ export default class FlatListBasics extends Component {
 
           <View style ={buttonrow.button}>
             {/*Prev Button*/}
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
               <View style={buttonStyles.button2}>
                 <Text style={buttonStyles.Text}>{"<< Previous"}</Text>
               </View>
             </TouchableHighlight>
 
             {/*Next Button*/}
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
               <View style={buttonStyles.button2}>
                 <Text style={buttonStyles.Text}>{"Next >>"}</Text>
               </View>
@@ -48,7 +48,7 @@ export default class FlatListBasics extends Component {
 
 
           {/*Return to Main Menu Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
             <View style={buttonStyles.button}>
               <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
             </View>
@@ -84,17 +84,17 @@ const buttonStyles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'blue'
   },
   buttonText: {
     fontSize: 20,
     padding: 20,
-    color: 'blue'
+    color: 'white'
   },
   Text: {
     fontSize: 20,
     padding: 20,
-    color: 'white'
+    color: 'black'
   },
 
   button2: {
@@ -102,7 +102,7 @@ const buttonStyles = StyleSheet.create({
     width: 175,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'blue'
+    backgroundColor: 'white'
   },
 });
 

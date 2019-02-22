@@ -106,11 +106,10 @@ export default class ReferenceScreen extends Component {
                         1 imp gal = 4.546l
                     </Text>
 
+                    <Text></Text>
+                    <Text></Text>
+
                     <Text style={styles.subtitleContainer}>
-
-                    <Text></Text>
-                    <Text></Text>
-
                         <B>Weight</B>
                     </Text>
 
@@ -130,7 +129,7 @@ export default class ReferenceScreen extends Component {
                     <Text></Text>
 
                     {/*Guide Button*/}
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
                       <View style={buttonStyles.button}>
                         <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
                       </View>
@@ -166,7 +165,7 @@ const styles = StyleSheet.create({
     },
     subtitleContainer: {
         textAlign: 'center',
-        fontSize: 22,
+        fontSize: 30,
         color: 'white',
         paddingHorizontal: 12,
         paddingVertical: 8,
@@ -202,11 +201,11 @@ const buttonStyles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'blue'
   },
   buttonText: {
     fontSize: 20,
     padding: 20,
-    color: 'blue'
+    color: 'white'
   }
 });

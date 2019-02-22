@@ -38,6 +38,9 @@ class HomeScreen extends React.Component {
 
           <StatusBar backgroundColor="blue" barStyle="light-content" />
 
+          <Text></Text>
+          <Text></Text>
+
           {/*Logo*/}
           <Image source={require('./iPhoneLogo.png')} />
           <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
@@ -48,46 +51,49 @@ class HomeScreen extends React.Component {
           <Text></Text>
 
           {/*Guide Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') }>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Guide</Text>
             </View>
           </TouchableHighlight>
 
           {/*Learn Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') }>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Learn</Text>
             </View>
           </TouchableHighlight>
 
           {/*Play Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Play') }>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Play</Text>
             </View>
           </TouchableHighlight>
 
           {/*Practice Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') }>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Practice</Text>
             </View>
           </TouchableHighlight>
 
           {/*References Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') } underlayColor="blue">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Reference') }>
             <View style={styles.button}>
               <Text style={styles.buttonText}>References</Text>
             </View>
           </TouchableHighlight>
 
           {/*Measure On Your Own Button*/}
-          <TouchableHighlight onPress={() => Linking.openURL('itms-apps://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('itms-apps://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="white">
             <View>
-              <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
+              <Text style={styles.Text}>Click Here to Measure On Your Own!</Text>
             </View>
           </TouchableHighlight>
+
+          <Text></Text>
+          <Text></Text>
 
         </View>
       </ScrollView>
@@ -144,12 +150,17 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'blue'
   },
   buttonText: {
     fontSize: 20,
     padding: 20,
-    color: 'blue'
+    color: 'white'
+  },
+  Text: {
+    fontSize: 20,
+    padding: 20,
+    color: 'gold'
   },
   contentContainer: {
       paddingVertical: 10,
