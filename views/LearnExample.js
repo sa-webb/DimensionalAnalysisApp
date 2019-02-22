@@ -70,6 +70,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
     height: 44,
   },
+  contentContainer: {
+      paddingVertical: 10,
+      backgroundColor: 'black',
+  }
 })
 
 const buttonStyles = StyleSheet.create({

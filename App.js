@@ -3,15 +3,13 @@ import { StyleSheet, Button, Text, View, Image, ScrollView, TouchableHighlight, 
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 
-import FlatList from './views/FlatList';
-
 import Buttons from './components/Buttons';
 
 import GuideScreen from './views/GuideScreen';
 
 import LearnScreen from './views/LearnScreen';
-
 import LearnExample from './views/LearnExample';
+import TutorialVideos from './views/TutorialVideos';
 
 import PlayScreen from './views/PlayScreen';
 
@@ -20,7 +18,9 @@ import PracticeScreen from './views/PracticeScreen';
 import ReferenceScreen from './views/ReferenceScreen';
 
 import ProductFetch from './views/ProductFetch';
-import ChemScreen from './views/tutorials/ChemScreen';
+
+{/*This allows you to bold like you do in HTML*/}
+const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 class HomeScreen extends React.Component {
 
@@ -38,6 +38,9 @@ class HomeScreen extends React.Component {
 
           {/*Logo*/}
           <Image source={require('./iPhoneLogo.png')} />
+          <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+            <B>Chemistry Edition</B>
+          </Text>
 
           <Text></Text>
           <Text></Text>
@@ -78,7 +81,7 @@ class HomeScreen extends React.Component {
           </TouchableHighlight>
 
           {/*Measure On Your Own Button*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="blue">
+          <TouchableHighlight onPress={() => Linking.openURL('itms-apps://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="blue">
             <View>
               <Text style={styles.buttonText}>Click Here to Measure On Your Own!</Text>
             </View>
@@ -107,7 +110,7 @@ const RootStack = createStackNavigator(
     Reference: ReferenceScreen,
     Fetch: ProductFetch,
     Button: Buttons,
-    Tutorials: FlatList
+    Tutorials: TutorialVideos
 
   },
   {
