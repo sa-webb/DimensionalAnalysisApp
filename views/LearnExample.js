@@ -30,19 +30,22 @@ export default class FlatListBasics extends Component {
             resizeMode="contain"
           />
 
-          {/*Prev Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
-            <View style={buttonStyles.button}>
-              <Text style={buttonStyles.buttonText}>Previous Step</Text>
-            </View>
-          </TouchableHighlight>
+          <View style ={buttonrow.button}>
+            {/*Prev Button*/}
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+              <View style={buttonStyles.button2}>
+                <Text style={buttonStyles.Text}>{"<< Previous"}</Text>
+              </View>
+            </TouchableHighlight>
 
-          {/*Next Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
-            <View style={buttonStyles.button}>
-              <Text style={buttonStyles.buttonText}>Next Step</Text>
-            </View>
-          </TouchableHighlight>
+            {/*Next Button*/}
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+              <View style={buttonStyles.button2}>
+                <Text style={buttonStyles.Text}>{"Next >>"}</Text>
+              </View>
+            </TouchableHighlight>
+          </View>
+
 
           {/*Return to Main Menu Button*/}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
    flex: 1,
    alignItems: 'center',
    backgroundColor: 'black',
-   paddingTop: 22
+   paddingTop: 22,
   },
   item: {
     padding: 40,
@@ -87,5 +90,26 @@ const buttonStyles = StyleSheet.create({
     fontSize: 20,
     padding: 20,
     color: 'blue'
-  }
+  },
+  Text: {
+    fontSize: 20,
+    padding: 20,
+    color: 'white'
+  },
+
+  button2: {
+    marginBottom: 5,
+    width: 175,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'blue'
+  },
+});
+
+const buttonrow = StyleSheet.create({
+  button: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  padding: 20
+}
 });

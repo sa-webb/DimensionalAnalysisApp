@@ -25,8 +25,6 @@ export default class FlatListBasics extends Component {
           </Text>
         */}
 
-          <Text> </Text>
-
           <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
             <B>DASH is broken down into three main components:</B>
           </Text>
