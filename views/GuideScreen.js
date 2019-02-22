@@ -9,16 +9,18 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 export default class FlatListBasics extends Component {
 
   static navigationOptions = {
-    title: 'DASH - An Educational App',
+    title: 'GUIDE',
 };
 
   render() {
     return (
       <View style={styles.container}>
 
+      {/*
         <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>
           <B>GUIDE</B>
         </Text>
+      */}
 
         <Text> </Text>
 
@@ -54,9 +56,13 @@ export default class FlatListBasics extends Component {
         </Text>
 
         <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
 
         {/*Return to Main Menu Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
           <View style={buttonStyles.button}>
             <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
           </View>

@@ -9,30 +9,32 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 export default class FlatListBasics extends Component {
 
   static navigationOptions = {
-    title: 'DASH - An Educational App',
+    title: 'LEARN',
 };
 
   render() {
     return (
       <View style={styles.container}>
 
+      {/*
         <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>
           <B>LEARN</B>
         </Text>
+      */}
 
         <Text></Text>
         <Text></Text>
 
         <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
           Click <B>Start</B> to begin walking through different
-          dimensional analysis problems.
+          dimensional analysis problems:
         </Text>
 
         <Text></Text>
         <Text></Text>
 
         {/*Start Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
           <View style={buttonStyles.button}>
             <Text style={buttonStyles.buttonText}>Start</Text>
           </View>
@@ -49,9 +51,13 @@ export default class FlatListBasics extends Component {
         <Text></Text>
         <Text></Text>
         <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
 
         {/*Return to Main Menu Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
           <View style={buttonStyles.button}>
             <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
           </View>

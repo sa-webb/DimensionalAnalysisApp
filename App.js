@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, TouchableHighlight, Linking } from 'react-native';
+import { StyleSheet, Button, Text, View, Image, TouchableHighlight, Linking } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 
@@ -24,11 +24,14 @@ class HomeScreen extends React.Component {
 
   static navigationOptions = {
     title: 'DASH - An Educational App',
+    header: null
 };
 
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
+
+        <Image source={require('./iPhoneLogo.png')} />
 
         {/*Guide Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Guide') } underlayColor="blue">

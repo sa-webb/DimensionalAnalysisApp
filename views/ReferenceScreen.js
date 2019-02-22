@@ -9,7 +9,7 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 export default class ReferenceScreen extends Component {
 
     static navigationOptions = {
-        title: 'References',
+        title: 'REFERENCES',
     };
 
     _onPressButton() {
@@ -130,7 +130,7 @@ export default class ReferenceScreen extends Component {
                     <Text></Text>
 
                     {/*Guide Button*/}
-                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="white">
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
                       <View style={buttonStyles.button}>
                         <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
                       </View>
