@@ -11,6 +11,8 @@ import GuideScreen from './views/GuideScreen';
 
 import LearnScreen from './views/LearnScreen';
 
+import LearnExample from './views/LearnExample';
+
 import PlayScreen from './views/PlayScreen';
 
 import PracticeScreen from './views/PracticeScreen';
@@ -99,11 +101,13 @@ const RootStack = createStackNavigator(
     Home: HomeScreen,
     Guide: GuideScreen,
     Learn: LearnScreen,
+    Example: LearnExample,
     Play: PlayScreen,
     Practice: PracticeScreen,
     Reference: ReferenceScreen,
     Fetch: ProductFetch,
     Button: Buttons,
+    Tutorials: FlatList
 
   },
   {

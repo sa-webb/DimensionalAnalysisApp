@@ -35,7 +35,7 @@ export default class FlatListBasics extends Component {
         <Text></Text>
 
         {/*Start Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Example') } underlayColor="blue">
           <View style={buttonStyles.button}>
             <Text style={buttonStyles.buttonText}>Start</Text>
           </View>

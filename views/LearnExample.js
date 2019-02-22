@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { FlatList, StyleSheet, Text, ScrollView, Image, View, TouchableHighlight } from 'react-native';
 import Buttons from '../components/Buttons';
 import Home from '../App.js'
 
@@ -14,59 +14,45 @@ export default class FlatListBasics extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
 
-      {/*
-        <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>
-          <B>LEARN</B>
-        </Text>
-      */}
+      <ScrollView style={styles.contentContainer}>
+        <View style={styles.container}>
 
-        <Text></Text>
-        <Text></Text>
+          <Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>
+            Click <B>Next Step</B> to step through each process of solving this problem,
+            or <B>Previous Step</B> to see a prior step in solving this problem.
+          </Text>
 
-        <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
-          Click <B>Start</B> to begin walking through different
-          dimensional analysis problems:
-        </Text>
+          {/*WE SHOULD MAKE THIS A FETCH EVENTUALLY*/}
+          {/*Practice Question*/}
+          <Image source={require('../PracticeQuestion.png')}
+            style={{ width: 350 }}
+            resizeMode="contain"
+          />
 
-        <Text></Text>
-        <Text></Text>
+          {/*Prev Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+            <View style={buttonStyles.button}>
+              <Text style={buttonStyles.buttonText}>Previous Step</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Start Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
-          <View style={buttonStyles.button}>
-            <Text style={buttonStyles.buttonText}>Start</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Next Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+            <View style={buttonStyles.button}>
+              <Text style={buttonStyles.buttonText}>Next Step</Text>
+            </View>
+          </TouchableHighlight>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          For each problem, use the <B>Next</B> button to step through
-          each part of solving it.
-        </Text>
+          {/*Return to Main Menu Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+            <View style={buttonStyles.button}>
+              <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Prev Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
-          <View style={buttonStyles.button}>
-            <Text style={buttonStyles.buttonText}>Previous Step</Text>
-          </View>
-        </TouchableHighlight>
-
-        {/*Next Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
-          <View style={buttonStyles.button}>
-            <Text style={buttonStyles.buttonText}>Next Step</Text>
-          </View>
-        </TouchableHighlight>
-
-        {/*Return to Main Menu Button*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
-          <View style={buttonStyles.button}>
-            <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
-          </View>
-        </TouchableHighlight>
-
-      </View>
+        </View>
+      </ScrollView>
     );
   }
 }
