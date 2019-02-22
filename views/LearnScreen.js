@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import Buttons from '../components/Buttons';
 import Home from '../App.js'
+import Tutorials from './FlatList'
 
 {/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
@@ -40,7 +41,7 @@ export default class FlatListBasics extends Component {
           </View>
         </TouchableHighlight>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+        <Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>
           For each problem, use the <B>Next</B> button to step through
           each part of solving it.
         </Text>
@@ -50,11 +51,13 @@ export default class FlatListBasics extends Component {
         <Text></Text>
         <Text></Text>
         <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
+
+        {/*Tutorials Button*/}
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorials') } underlayColor="blue">
+          <View style={buttonStyles.button}>
+            <Text style={buttonStyles.buttonText}>Tutorial Videos</Text>
+          </View>
+        </TouchableHighlight>
 
         {/*Return to Main Menu Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">

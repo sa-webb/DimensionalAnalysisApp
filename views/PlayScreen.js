@@ -24,36 +24,10 @@ export default class FlatListBasics extends Component {
 
         <Text> </Text>
 
-        <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
-          <B>DASH is broken down into three main components:</B>
-        </Text>
-
-        <Text> </Text>
-
         <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>1. Learn - </B>
-          This section provides
-          step-by-step tutorials for understanding how to solve dimensional
-          analysisproblems
+          <B>**INSERT CALL TO 2D GAME PLATFORMER HERE**</B>
         </Text>
 
-        <Text></Text>
-
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>2. Play - </B>
-          This section features a 2D
-          platformer game that tests your ability to convert different units
-          using dimensional analysis, and then reason which of the two displayed
-          measurements is greater and which is smaller.
-        </Text>
-
-        <Text></Text>
-
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>3. Practice - </B>
-          This section features a
-          variety of questions asked in the form of short answer.
-        </Text>
 
         <Text></Text>
         <Text></Text>
