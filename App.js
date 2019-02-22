@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, Image, ScrollView, TouchableHighlight, Linking } from 'react-native';
+import { StyleSheet, Button, Text, View, Image, ScrollView, StatusBar, TouchableHighlight, Linking } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 
@@ -35,6 +35,8 @@ class HomeScreen extends React.Component {
       <ScrollView style={styles.contentContainer}>
 
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'black'}}>
+
+          <StatusBar backgroundColor="blue" barStyle="light-content" />
 
           {/*Logo*/}
           <Image source={require('./iPhoneLogo.png')} />

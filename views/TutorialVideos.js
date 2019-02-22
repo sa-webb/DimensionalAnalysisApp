@@ -15,59 +15,90 @@ export default class FlatListBasics extends Component {
       <ScrollView style={styles.contentContainer}>
         <View style={styles.container}>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>The following resources are recommended to help you better
-          understand dimensional analysis and unit conversions:</B>
-        </Text>
+          <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+            <B>The following resources are recommended to help you better
+            understand dimensional analysis and unit conversions:</B>
+          </Text>
 
-        <Text></Text>
-        <Text></Text>
+          <Text></Text>
+          <Text></Text>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>Khan Academy:</B>
-        </Text>
+          <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+            <B>Science Fundamentals:</B>
+          </Text>
 
-        {/*Stoichiometry Introduction*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') } underlayColor="blue">
-          <View>
-            <Text style={styles.buttonText}>Stoichiometry Introduction</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Scientific Calculator Help*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Scientific Calculator Help</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Stoichiometry Example 1*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') } underlayColor="blue">
-          <View>
-            <Text style={styles.buttonText}>Stoichiometry Example 1</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Significant Figures Help*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Significant Figures Help</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Stoichiometry Example 2*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-2') } underlayColor="blue">
-          <View>
-            <Text style={styles.buttonText}>Stoichiometry Example 2</Text>
-          </View>
-        </TouchableHighlight>
+          <Text></Text>
+          <Text></Text>
 
-        <Text></Text>
-        <Text></Text>
+          <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+            <B>Stoichiometry:</B>
+          </Text>
 
-        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>YouTube:</B>
-        </Text>
+          {/*Stoichiometry Introduction*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Stoichiometry Introduction</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Tutorial 4*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') } underlayColor="blue">
-          <View>
-            <Text style={styles.buttonText}>Dimensional Analysis for Chemsitry</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Stoichiometry Example 1*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Stoichiometry Example 1</Text>
+            </View>
+          </TouchableHighlight>
 
-        {/*Tutorial 5*/}
-        <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=3VnPVGGYSvI') } underlayColor="blue">
-          <View>
-            <Text style={styles.buttonText}>Converting Units in Chemistry</Text>
-          </View>
-        </TouchableHighlight>
+          {/*Stoichiometry Example 2*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-2') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Stoichiometry Example 2</Text>
+            </View>
+          </TouchableHighlight>
+
+          <Text></Text>
+          <Text></Text>
+
+          <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+            <B>Dimensional Analysis & Unit Conversions:</B>
+          </Text>
+
+          {/*Tutorial 4*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Dimensional Analysis</Text>
+            </View>
+          </TouchableHighlight>
+
+          {/*Tutorial 5*/}
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=3VnPVGGYSvI') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Unit Conversions</Text>
+            </View>
+          </TouchableHighlight>
+
+          <Text></Text>
+          <Text></Text>
+
+          {/*Return to Main Menu Button*/}
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') } underlayColor="blue">
+            <View style={buttonStyles.button}>
+              <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
+            </View>
+          </TouchableHighlight>
         </View>
       </ScrollView>
     );
@@ -97,3 +128,17 @@ const styles = StyleSheet.create({
     color: 'blue'
   }
 })
+
+const buttonStyles = StyleSheet.create({
+  button: {
+    marginBottom: 30,
+    width: 260,
+    alignItems: 'center',
+    backgroundColor: 'white'
+  },
+  buttonText: {
+    fontSize: 20,
+    padding: 20,
+    color: 'blue'
+  }
+});
