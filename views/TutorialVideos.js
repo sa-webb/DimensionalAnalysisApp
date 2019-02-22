@@ -27,17 +27,24 @@ export default class FlatListBasics extends Component {
             <B>Science Fundamentals:</B>
           </Text>
 
-          {/*Scientific Calculator Help*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') } underlayColor="blue">
+          {/*Scientific Calculator*/}
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
             <View>
-              <Text style={styles.buttonText}>Scientific Calculator Help</Text>
+              <Text style={styles.buttonText}>Scientific Calculator</Text>
             </View>
           </TouchableHighlight>
 
-          {/*Significant Figures Help*/}
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') } underlayColor="blue">
+          {/*Significant Figures*/}
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
             <View>
-              <Text style={styles.buttonText}>Significant Figures Help</Text>
+              <Text style={styles.buttonText}>Significant Figures</Text>
+            </View>
+          </TouchableHighlight>
+
+          {/*Scientific Notation*/}
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Scientific Notation</Text>
             </View>
           </TouchableHighlight>
 
@@ -76,14 +83,21 @@ export default class FlatListBasics extends Component {
             <B>Dimensional Analysis & Unit Conversions:</B>
           </Text>
 
-          {/*Tutorial 4*/}
+          {/*Dimensional Analysis Example 1*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') } underlayColor="blue">
             <View>
-              <Text style={styles.buttonText}>Dimensional Analysis</Text>
+              <Text style={styles.buttonText}>Dimensional Analysis Example 1</Text>
             </View>
           </TouchableHighlight>
 
-          {/*Tutorial 5*/}
+          {/*Dimensional Analysis Example 2*/}
+          <TouchableHighlight onPress={() => Linking.openURL('') } underlayColor="blue">
+            <View>
+              <Text style={styles.buttonText}>Dimensional Analysis Example 2</Text>
+            </View>
+          </TouchableHighlight>
+
+          {/*Unit Conversions*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=3VnPVGGYSvI') } underlayColor="blue">
             <View>
               <Text style={styles.buttonText}>Unit Conversions</Text>
