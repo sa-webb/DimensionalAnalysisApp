@@ -46,14 +46,12 @@ export default class FlatListBasics extends Component {
             </TouchableHighlight>
           </View>
 
-
           {/*Return to Main Menu Button*/}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
             <View style={buttonStyles.button}>
               <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
             </View>
           </TouchableHighlight>
-
         </View>
       </ScrollView>
     );
@@ -102,7 +100,7 @@ const buttonStyles = StyleSheet.create({
     width: 175,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'gold'
   },
 });
 

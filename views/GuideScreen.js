@@ -72,8 +72,6 @@ export default class FlatListBasics extends Component {
           <Text></Text>
           <Text></Text>
           <Text></Text>
-          <Text></Text>
-          <Text></Text>
 
           {/*Return to Main Menu Button*/}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
