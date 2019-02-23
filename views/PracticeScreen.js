@@ -15,7 +15,7 @@ export default class FlatListBasics extends Component {
   /*constructor for textbox*/
   constructor(props) {
     super(props);
-    this.state = { text: 'Enter Answer Here' }
+    this.state = { text: '' }
   }
 
   render() {
@@ -38,22 +38,23 @@ export default class FlatListBasics extends Component {
         <View style={{flexDirection:'row'}}>
             <View>
               <TextInput
-                  style={{alignItems:'center',justifyContent:'center',backgroundColor:'white'}}
+                  style={{ alignItems:'center', height: 40, width: 200, padding: 5, justifyContent:'center', backgroundColor:'white' }}
                   onChangeText = {(text) => this.setState({text})}
                   value = {this.state.text}
                   keyboardType = 'web-search'
                   />
             </View>
+
+            <Text></Text>
+              {/*Submits Answer*/}
+              <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
+                <View style={buttonStyles.button2}>
+                  <Text style={buttonStyles.Text}>Submit</Text>
+                </View>
+              </TouchableHighlight>
         </View>
 
         <Text></Text>
-
-        {/*Submits Answer*/}
-        <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-          <View style={buttonStyles.button}>
-            <Text style={buttonStyles.buttonText}>Submit Answer</Text>
-          </View>
-        </TouchableHighlight>
 
         <Text></Text>
         <Text></Text>
@@ -92,9 +93,22 @@ const buttonStyles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'blue'
   },
+  button2: {
+    width: 75,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'blue'
+  },
   buttonText: {
     fontSize: 20,
     padding: 20,
-    color: 'white'
+    color: 'white',
+    textAlign: 'center'
+  },
+  Text: {
+    fontSize: 20,
+    color: 'white',
+    textAlign: 'center'
   }
 });
