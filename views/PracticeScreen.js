@@ -31,14 +31,14 @@ export default class FlatListBasics extends Component {
         {/*WE SHOULD MAKE THIS A FETCH EVENTUALLY*/}
         {/*Practice Question*/}
         <Image source={require('../PracticeQuestion.png')}
-          style={{ width: 350 }}
+          style={{ width: 375 }}
           resizeMode="contain"
         />
 
         <View style={{flexDirection:'row'}}>
             <View>
               <TextInput
-                  style={{ alignItems:'center', height: 40, width: 200, padding: 5, justifyContent:'center', backgroundColor:'white' }}
+                  style={{ alignItems:'center', height: 35, width: 200, padding: 5, justifyContent:'center', backgroundColor:'white' }}
                   onChangeText = {(text) => this.setState({text})}
                   value = {this.state.text}
                   keyboardType = 'web-search'
@@ -55,7 +55,12 @@ export default class FlatListBasics extends Component {
         </View>
 
         <Text></Text>
-
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
         <Text></Text>
         <Text></Text>
 
@@ -95,7 +100,7 @@ const buttonStyles = StyleSheet.create({
   },
   button2: {
     width: 75,
-    height: 40,
+    height: 35,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'blue'

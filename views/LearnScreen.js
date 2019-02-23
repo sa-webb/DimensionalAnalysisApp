@@ -40,13 +40,13 @@ export default class FlatListBasics extends Component {
           </View>
         </TouchableHighlight>
 
-        <Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>
-          For each problem, use the <B>Next</B> button to step through
-          each part of solving it.
+        <Text></Text>
+        <Text></Text>
+
+        <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
+          Or watch some tutorial videos first:
         </Text>
 
-        <Text></Text>
-        <Text></Text>
         <Text></Text>
 
         {/*Tutorials Button*/}
@@ -56,6 +56,8 @@ export default class FlatListBasics extends Component {
           </View>
         </TouchableHighlight>
 
+        <Text></Text>
+        <Text></Text>
         <Text></Text>
         <Text></Text>
 

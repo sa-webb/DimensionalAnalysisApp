@@ -28,23 +28,31 @@ export default class FlatListBasics extends Component {
             <B>SCIENCE FUNDAMENTALS:</B>
           </Text>
 
+          <Text></Text>
+
           {/*Scientific Calculator*/}
           <TouchableHighlight onPress={() => Linking.openURL('') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Scientific Calculator</Text>
             </View>
           </TouchableHighlight>
 
+          <Text></Text>
+          <Text></Text>
+
           {/*Significant Figures*/}
           <TouchableHighlight onPress={() => Linking.openURL('') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Significant Figures</Text>
             </View>
           </TouchableHighlight>
 
+          <Text></Text>
+          <Text></Text>
+
           {/*Scientific Notation*/}
           <TouchableHighlight onPress={() => Linking.openURL('') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Scientific Notation</Text>
             </View>
           </TouchableHighlight>
@@ -56,23 +64,32 @@ export default class FlatListBasics extends Component {
             <B>DIMENSIONAL ANALYSIS & UNIT CONVERSIONS:</B>
           </Text>
 
+          <Text></Text>
+
           {/*Dimensional Analysis Example 1*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Dimensional Analysis Example 1</Text>
             </View>
           </TouchableHighlight>
 
+          <Text></Text>
+          <Text></Text>
+
           {/*Dimensional Analysis Example 2*/}
           <TouchableHighlight onPress={() => Linking.openURL('') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Dimensional Analysis Example 2</Text>
             </View>
           </TouchableHighlight>
 
+          <Text></Text>
+          <Text></Text>
+
+
           {/*Unit Conversions*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=3VnPVGGYSvI') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Unit Conversions</Text>
             </View>
           </TouchableHighlight>
@@ -84,23 +101,31 @@ export default class FlatListBasics extends Component {
             <B>STOICHIOMETRY:</B>
           </Text>
 
+          <Text></Text>
+
           {/*Stoichiometry Introduction*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Stoichiometry Introduction</Text>
             </View>
           </TouchableHighlight>
 
+          <Text></Text>
+          <Text></Text>
+
           {/*Stoichiometry Example 1*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-1') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Stoichiometry Example 1</Text>
             </View>
           </TouchableHighlight>
 
+          <Text></Text>
+          <Text></Text>
+
           {/*Stoichiometry Example 2*/}
           <TouchableHighlight onPress={() => Linking.openURL('https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/modal/v/stoichiometry-example-problem-2') }>
-            <View>
+            <View style={buttonStyles.button}>
               <Text style={styles.buttonText}>Stoichiometry Example 2</Text>
             </View>
           </TouchableHighlight>
@@ -110,7 +135,7 @@ export default class FlatListBasics extends Component {
 
           {/*Return to Main Menu Button*/}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-            <View style={buttonStyles.button}>
+            <View style={buttonStyles.mainButton}>
               <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
             </View>
           </TouchableHighlight>
@@ -139,13 +164,19 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 20,
-    padding: 20,
-    color: 'gold'
+    color: 'white'
   }
 })
 
 const buttonStyles = StyleSheet.create({
   button: {
+    width: 300,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'blue'
+  },
+  mainButton: {
     marginBottom: 30,
     width: 260,
     alignItems: 'center',

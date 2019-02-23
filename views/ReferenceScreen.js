@@ -127,8 +127,10 @@ export default class ReferenceScreen extends Component {
 
                     <Text></Text>
                     <Text></Text>
+                    <Text></Text>
+                    <Text></Text>
 
-                    {/*Guide Button*/}
+                    {/*Return to Main Menu Button*/}
                     <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
                       <View style={buttonStyles.button}>
                         <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
