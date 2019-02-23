@@ -26,22 +26,31 @@ export default class FlatListBasics extends Component {
         */}
 
           <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
-            <B>DASH is broken down into three main components:</B>
+            <B>Dimensional Analysis Student Helper (DASH) is broken down into
+            three main components:</B>
           </Text>
 
-          <Text> </Text>
+          <Text></Text>
+          <Text></Text>
 
+          <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+            <B>LEARN.</B>
+          </Text>
+          <Text></Text>
           <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-            <B>1. Learn - </B>
             This section provides
             step-by-step tutorials for understanding how to solve dimensional
             analysis problems. It also provides a link to external tutorial videos.
           </Text>
 
           <Text></Text>
+          <Text></Text>
 
+          <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+            <B>PLAY.</B>
+          </Text>
+          <Text></Text>
           <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-            <B>2. Play - </B>
             This section features a 2D
             platformer game that tests your ability to convert different units
             using dimensional analysis, and then reason which of the two displayed
@@ -49,11 +58,15 @@ export default class FlatListBasics extends Component {
           </Text>
 
           <Text></Text>
+          <Text></Text>
 
+          <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
+            <B>PRACTICE.</B>
+          </Text>
+          <Text></Text>
           <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-            <B>3. Practice - </B>
-            This section features a
-            variety of questions asked in the form of short answer.
+            This section features a variety of questions asked
+            in the form of short answer.
           </Text>
 
           <Text></Text>

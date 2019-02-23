@@ -21,11 +21,10 @@ export default class FlatListBasics extends Component {
         <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>
           <B>LEARN</B>
         </Text>
+
+        <Text></Text>
+        <Text></Text>
       */}
-
-        <Text></Text>
-        <Text></Text>
-
         <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
           Click <B>Start</B> to begin walking through different
           dimensional analysis problems:
@@ -49,8 +48,6 @@ export default class FlatListBasics extends Component {
         <Text></Text>
         <Text></Text>
         <Text></Text>
-        <Text></Text>
-        <Text></Text>
 
         {/*Tutorials Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorials') }>
@@ -58,6 +55,9 @@ export default class FlatListBasics extends Component {
             <Text style={buttonStyles.buttonText}>Tutorial Videos</Text>
           </View>
         </TouchableHighlight>
+
+        <Text></Text>
+        <Text></Text>
 
         {/*Return to Main Menu Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
