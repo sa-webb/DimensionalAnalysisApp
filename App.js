@@ -86,7 +86,7 @@ class HomeScreen extends React.Component {
           </TouchableHighlight>
 
           {/*Measure On Your Own Button*/}
-          <TouchableHighlight onPress={() => Linking.openURL('itms-apps://itunes.apple.com/us/app/measure/id1383426740?mt=8') } underlayColor="white">
+          <TouchableHighlight onPress={() => Linking.openURL('itms-apps://itunes.apple.com/us/app/measure/id1383426740?mt=8') }>
             <View>
               <Text style={styles.Text}>Click Here to Measure On Your Own!</Text>
             </View>
