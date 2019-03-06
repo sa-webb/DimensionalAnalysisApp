@@ -2,6 +2,6 @@
 
 ## Installation instructions
 
-1. Clone the repository
-2. `yarn install`
-3. `node server.js`
+1. Clone the repository `git clone https://github.com/sa-webb/DimensionalAnalysisApp.git`
+2. Install Dependencies `yarn install`
+3. Start the server `node server.js`
