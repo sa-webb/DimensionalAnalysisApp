@@ -1,4 +1,4 @@
-# Dimensional Analysis Educational App
+# Dimensional Analysis Educational iOS App
 
 ## Installation instructions
 
