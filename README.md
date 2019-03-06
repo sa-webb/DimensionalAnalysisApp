@@ -1,13 +1,7 @@
 # Dimensional Analysis Educational App
 
-## Mobile App Composition
+## Installation instructions
 
-Components - decoupled aspects of views for reuse
-
-Views - entire screens
-
-## Node.js Server Architecture
-
-Model - abstract representation of the object
-Controller - flow of application execution
-Route - maps controller functions
+1. Clone the repository
+2. `yarn install`
+3. `node server.js`
