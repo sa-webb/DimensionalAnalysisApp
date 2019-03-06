@@ -3,10 +3,10 @@ const Article = require('./article.model');
 exports.article_create = function (req, res) {
     let article = new Article(
         {
-            name: req.body.name,
-            price: req.body.price,
-            identifyBy: req.body.identifyBy,
-            description: req.body.description
+            title: req.body.title,
+            subtitle: req.body.subtitle,
+            image: req.body.image,
+            content: req.body.content
         }
     );
 

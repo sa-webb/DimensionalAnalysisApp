@@ -2,15 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ArticleSchema = new Schema({
-    name: {
+    title: {
       type: 'String',
       required: true
     },
-    price: {
-      type: Number
+    subtitle: {
+      type: 'String'
     },
-    identifyBy: { type: 'String' },
-    description: { type: 'String' },
+    image: { type: 'String' },
+    content: { type: 'String' },
   });
 
 module.exports = mongoose.model('Article', ArticleSchema);
