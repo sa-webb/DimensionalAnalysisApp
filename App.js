@@ -2,9 +2,6 @@ import React from 'react';
 import { StyleSheet, Button, Text, View, Image, ScrollView, StatusBar, TouchableHighlight, Linking } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
-
-import Buttons from './components/Buttons';
-
 import GuideScreen from './views/GuideScreen';
 
 import LearnScreen from './views/LearnScreen';
@@ -117,9 +114,7 @@ const RootStack = createStackNavigator(
     Practice: PracticeScreen,
     Reference: ReferenceScreen,
     Fetch: ProductFetch,
-    Button: Buttons,
     Tutorials: TutorialVideos
-
   },
   {
     initialRouteName: 'Home',

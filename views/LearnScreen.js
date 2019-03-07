@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
-import Buttons from '../components/Buttons';
 import Home from '../App.js'
 import Tutorials from './TutorialVideos'
 

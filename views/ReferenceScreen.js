@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Image, ScrollView, Text, StyleSheet, Button, TouchableHighlight} from 'react-native';
-import Buttons from '../components/Buttons';
 import Home from '../App.js'
 
 {/*This allows you to bold like you do in HTML*/}
