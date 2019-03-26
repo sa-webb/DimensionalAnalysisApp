@@ -29,7 +29,7 @@ export default class FlatListBasics extends Component {
 
         {/*WE SHOULD MAKE THIS A FETCH EVENTUALLY*/}
         {/*Practice Question*/}
-        <Image source={require('../PracticeQuestion.png')}
+        <Image source={require('../assets/PracticeQuestion.png')}
           style={{ width: 375 }}
           resizeMode="contain"
         />
@@ -51,6 +51,7 @@ export default class FlatListBasics extends Component {
                   <Text style={buttonStyles.Text}>Submit</Text>
                 </View>
               </TouchableHighlight>
+              
         </View>
 
         <Text></Text>

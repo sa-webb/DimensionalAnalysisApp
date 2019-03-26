@@ -24,7 +24,7 @@ export default class FlatListBasics extends Component {
 
           {/*WE SHOULD MAKE THIS A FETCH EVENTUALLY*/}
           {/*Practice Question*/}
-          <Image source={require('../PracticeQuestion.png')}
+          <Image source={require('../assets/PracticeQuestion.png')}
             style={{ width: 350 }}
             resizeMode="contain"
           />

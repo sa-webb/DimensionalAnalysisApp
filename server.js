@@ -2,9 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
-const article = require('./server/article.route'); 
 const app = express();
+const article = require('./server/article.route');
 
 let dev_db_url = 'mongodb://austin:capstone3@ds341825.mlab.com:41825/articles';
 

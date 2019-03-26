@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Button, Text, View, Image, ScrollView, StatusBar, TouchableHighlight, Linking } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
 
+{/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 export default class HomeScreen extends Component {
@@ -11,6 +12,13 @@ export default class HomeScreen extends Component {
       header: null
   };
   
+  _loadResourcesAsync = async () => {
+    return Promise.all([
+      Asset.loadAsync([
+        require('../assets/iPhoneLogo.png'),
+      ])
+    ]);
+    };
     render() {
       return (
   
@@ -24,7 +32,7 @@ export default class HomeScreen extends Component {
             <Text></Text>
   
             {/*Logo*/}
-            <Image source={require('./assets/iPhoneLogo.png')} />
+            <Image source={require('../assets/iPhoneLogo.png')} />
             <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>
               <B>Chemistry Edition</B>
             </Text>
