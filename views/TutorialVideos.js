@@ -4,7 +4,7 @@ import { FlatList, StyleSheet, Text, View, ScrollView, TouchableHighlight, Linki
 {/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
-export default class FlatListBasics extends Component {
+export default class TutorialVideo extends Component {
 
   static navigationOptions = {
     title: 'Tutorials',

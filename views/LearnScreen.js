@@ -6,7 +6,7 @@ import Tutorials from './TutorialVideos'
 {/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
-export default class FlatListBasics extends Component {
+export default class LearnScreen extends Component {
 
   static navigationOptions = {
     title: 'LEARN',

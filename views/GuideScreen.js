@@ -5,7 +5,7 @@ import Home from '../App.js'
 {/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
-export default class FlatListBasics extends Component {
+export default class GuideScreen extends Component {
 
   static navigationOptions = {
     title: 'GUIDE',
