@@ -1,4 +1,4 @@
-const Article = require('./article.model');
+const Article = require('../models/article.model');
 
 exports.article_create = function (req, res) {
     let article = new Article(
