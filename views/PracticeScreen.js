@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet, Text, Image, View, TextInput, TouchableHighlight } from 'react-native';
 import Home from '../App.js'
+import { white } from 'ansi-colors';
 
 {/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
+import InputBar from '../components/InputBar';
+import Submit from '../components/Submit';
 export default class PracticeScreen extends Component {
 
   static navigationOptions = {
-    title: 'PRACTICE',
+    title: 'PROBLEM ONE',
 };
 
   /*constructor for textbox*/
-  constructor(props) {
-    super(props);
-    this.state = { text: '' }
-  }
+  
 
   render() {
     return (
@@ -26,39 +26,24 @@ export default class PracticeScreen extends Component {
           resizeMode="contain"
         />
 
-        <View style={{flexDirection:'row'}}>
-            <View>
-              <TextInput
-                  style={{ alignItems:'center', height: 35, width: 200, padding: 5, justifyContent:'center', backgroundColor:'white' }}
-                  placeholder="Enter Answer"
-                  onChangeText = {(text) => this.setState({text})}
-                  value = {this.state.text}
-                  keyboardType = 'web-search'
-              />
-            </View>
-          </View>
+        <InputBar/>
 
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-                <View style={buttonStyles.submitButton}>
-                  <Text style={buttonStyles.Text}>Submit</Text>
-                </View>
-          </TouchableHighlight>
+        <Submit/>
 
-          <View style ={buttonrow.button}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-              <View style={buttonStyles.button2}>
-                <Text style={buttonStyles.Text}>{"<< Previous"}</Text>
+          <View styles={styles.button}>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnTwo') }>
+              <View style={styles.button2}>
+                <Text style={styles.Text}>{"<< Previous"}</Text>
               </View>
             </TouchableHighlight>
 
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-              <View style={buttonStyles.button2}>
-                <Text style={buttonStyles.Text}>{"Next >>"}</Text>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnTwo') }>
+              <View style={styles.button2}>
+                <Text style={styles.Text}>{"Next >>"}</Text>
               </View>
             </TouchableHighlight>
           </View>
-          
-      </View>
+        </View>
     );
   }
 }
@@ -67,18 +52,21 @@ const styles = StyleSheet.create({
   container: {
    flex: 1,
    alignItems: 'center',
-   backgroundColor: 'black',
-   paddingTop: 22
+   backgroundColor: 'white',
   },
   item: {
     padding: 40,
     color: 'white',
     fontSize: 24,
     height: 44,
-  }
-})
-
-const buttonStyles = StyleSheet.create({
+  },
+  buttonrow: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'green',
+    
+  },
   button: {
     marginBottom: 10,
     width: 260,
@@ -86,9 +74,11 @@ const buttonStyles = StyleSheet.create({
     backgroundColor: 'blue'
   },
   button2: {
-    width: 150,
+    width: 250,
     height: 35,
     marginTop: 50,
+    padding: 5,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'blue'
@@ -112,13 +102,4 @@ const buttonStyles = StyleSheet.create({
     color: 'white',
     textAlign: 'center'
   }
-});
-
-const buttonrow = StyleSheet.create({
-  button: {
-  marginBottom: 5,
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  padding: 2
-}
 });

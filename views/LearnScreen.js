@@ -40,7 +40,6 @@ export default class LearnScreen extends Component {
 
         <Text></Text>
 
-        {/*Tutorials Button*/}
         <TouchableHighlight onPress={() => this.props.navigation.navigate('Tutorials') }>
           <View style={buttonStyles.button}>
             <Text style={buttonStyles.buttonText}>Tutorial Videos</Text>
