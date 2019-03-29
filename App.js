@@ -5,7 +5,8 @@ import { createStackNavigator, createAppContainer, createSwitchNavigator } from 
 // Static Screens
 import GuideScreen from './views/GuideScreen';
 import LearnScreen from './views/LearnScreen';
-import LearnExample from './views/LearnExample';
+import LearnExample from './content/questions/LearnExample';
+import LearnExampleTwo from './content/questions/LearnExampleTwo';
 import TutorialVideos from './views/TutorialVideos';
 import PlayScreen from './views/PlayScreen';
 import PracticeScreen from './views/PracticeScreen';
@@ -17,11 +18,15 @@ import Article from './components/Article';
 // Server screens
 import ArticleFetch from './components/ArticleFetch';
 
+//import RootStackk from './config/Navigation';
+// import AppContainer from './config/Navigation';
+
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
     Guide: GuideScreen,
     Learn: LearnScreen,
+    LearnTwo: LearnExampleTwo,
     Example: LearnExample,
     Play: PlayScreen,
     Practice: PracticeScreen,
@@ -53,26 +58,3 @@ export default class App extends React.Component {
     return <AppContainer />;
   }
 }
-
-const styles = StyleSheet.create({
-  button: {
-    marginBottom: 30,
-    width: 260,
-    alignItems: 'center',
-    backgroundColor: 'blue'
-  },
-  buttonText: {
-    fontSize: 20,
-    padding: 20,
-    color: 'white'
-  },
-  Text: {
-    fontSize: 20,
-    padding: 20,
-    color: 'gold'
-  },
-  contentContainer: {
-      paddingVertical: 10,
-      backgroundColor: 'black',
-  }
-});
