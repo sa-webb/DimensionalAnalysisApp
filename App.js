@@ -12,11 +12,10 @@ import PlayScreen from './views/PlayScreen';
 import PracticeScreen from './views/PracticeScreen';
 import ReferenceScreen from './views/ReferenceScreen';
 import HomeScreen from './views/HomeScreen';
-import Article from './components/Article';
-
 
 // Server screens
-import ArticleFetch from './components/ArticleFetch';
+import ArticleFetch from './content/tutorials/ArticleFetch';
+import Article from './content/tutorials/Article';
 
 //import RootStackk from './config/Navigation';
 // import AppContainer from './config/Navigation';
@@ -52,7 +51,6 @@ const RootStack = createStackNavigator(
 );
 
 const AppContainer = createAppContainer(RootStack);
-
 export default class App extends React.Component {
   render() {
     return <AppContainer />;
