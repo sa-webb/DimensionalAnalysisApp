@@ -1,5 +1,4 @@
 import React from 'react';
-
 import createStackNavigator from 'react-navigation';
 
 import GuideScreen from '../views/GuideScreen';
@@ -10,11 +9,10 @@ import PlayScreen from '../views/PlayScreen';
 import PracticeScreen from '../views/PracticeScreen';
 import ReferenceScreen from '../views/ReferenceScreen';
 import HomeScreen from '../views/HomeScreen';
-import Article from '../components/Article';
 
-
-// Server screens
-import ArticleFetch from '../components/ArticleFetch';
+// Backend screens
+import ArticleFetch from '../content/tutorials/ArticleFetch';
+import Article from '../content/tutorials/Article';
 
 const RootStackk = createStackNavigator(
   {
@@ -44,3 +42,4 @@ const RootStackk = createStackNavigator(
     },
   }
 );
+export default RootStackk;
