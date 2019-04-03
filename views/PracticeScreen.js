@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import { FlatList, StyleSheet, Text, Image, View, TextInput, TouchableHighlight } from 'react-native';
-import Home from '../App.js'
-import { white } from 'ansi-colors';
 
-{/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 import InputBar from '../components/InputBar';
 import Submit from '../components/Submit';
+import NextPrev from '../components/ButtonRow';
 export default class PracticeScreen extends Component {
 
   static navigationOptions = {
     title: 'PROBLEM ONE',
-};
+  };
 
   /*constructor for textbox*/
   
@@ -30,20 +28,9 @@ export default class PracticeScreen extends Component {
 
         <Submit/>
 
-          <View styles={styles.button}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnTwo') }>
-              <View style={styles.button2}>
-                <Text style={styles.Text}>{"<< Previous"}</Text>
-              </View>
-            </TouchableHighlight>
+        <NextPrev/>
 
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnTwo') }>
-              <View style={styles.button2}>
-                <Text style={styles.Text}>{"Next >>"}</Text>
-              </View>
-            </TouchableHighlight>
-          </View>
-        </View>
+      </View>
     );
   }
 }

@@ -48,7 +48,7 @@ export default class HomeScreen extends Component {
             </TouchableHighlight>
   
             {/*Learn Button*/}
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Learn') }>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnOne') }>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Learn</Text>
               </View>
@@ -62,7 +62,7 @@ export default class HomeScreen extends Component {
             </TouchableHighlight>
   
             {/*Practice Button*/}
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Practice') }>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnOne') }>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Practice</Text>
               </View>
@@ -100,12 +100,12 @@ const styles = StyleSheet.create({
       backgroundColor: 'blue'
     },
     buttonText: {
-      fontSize: 20,
+      fontSize: 28,
       padding: 20,
       color: 'white'
     },
     Text: {
-      fontSize: 20,
+      fontSize: 22,
       padding: 20,
       color: 'gold'
     },

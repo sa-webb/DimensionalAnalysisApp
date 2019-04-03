@@ -75,7 +75,7 @@ export default class GuideScreen extends Component {
           {/*Return to Main Menu Button*/}
           <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
             <View style={buttonStyles.button}>
-              <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
+              <Text style={buttonStyles.buttonText}>Main Menu</Text>
             </View>
           </TouchableHighlight>
 

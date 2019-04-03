@@ -13,7 +13,7 @@ export default class InputBar extends Component {
         <View style={{flexDirection:'row'}}>
          <View>
             <TextInput
-                  style={{ alignItems:'center', height: 35, width: 250, padding: 5, justifyContent:'center', backgroundColor:'white' }}
+                  style={{ alignItems:'center', fontSize:24 , height: 50, width: 250, padding: 5, justifyContent: "center", backgroundColor:'white' }}
                   placeholder="Enter Answer"
                   onChangeText = {(text) => this.setState({text})}
                   value = {this.state.text}
