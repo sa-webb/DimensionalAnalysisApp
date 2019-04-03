@@ -4,9 +4,6 @@ import { createStackNavigator, createAppContainer, createSwitchNavigator } from 
 
 // Static Screens
 import GuideScreen from './views/GuideScreen';
-import LearnScreen from './views/LearnScreen';
-import LearnExample from './content/questions/LearnExample';
-import LearnExampleTwo from './content/questions/LearnExampleTwo';
 import TutorialVideos from './views/TutorialVideos';
 import PlayScreen from './views/PlayScreen';
 import PracticeScreen from './views/PracticeScreen';
@@ -17,6 +14,10 @@ import HomeScreen from './views/HomeScreen';
 import ArticleFetch from './content/tutorials/ArticleFetch';
 import Article from './content/tutorials/Article';
 
+// Quiz screens
+import LearnExample from './content/questions/LearnExample';
+import LearnExampleTwo from './content/questions/LearnExampleTwo';
+
 //import RootStackk from './config/Navigation';
 // import AppContainer from './config/Navigation';
 
@@ -24,9 +25,8 @@ const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
     Guide: GuideScreen,
-    Learn: LearnScreen,
+    LearnOne: LearnExample,
     LearnTwo: LearnExampleTwo,
-    Example: LearnExample,
     Play: PlayScreen,
     Practice: PracticeScreen,
     Reference: ReferenceScreen,
