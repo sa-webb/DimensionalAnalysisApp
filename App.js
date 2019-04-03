@@ -11,7 +11,7 @@ import HomeScreen from './views/HomeScreen';
 
 // Server screens
 import ArticleFetch from './content/tutorials/ArticleFetch';
-import Article from './content/tutorials/Article';
+import ArticleView from './content/tutorials/ArticleView';
 
 // Quiz screens
 import LearnExample from './content/questions/LearnExample';
@@ -30,7 +30,7 @@ const RootStack = createStackNavigator(
     Reference: ReferenceScreen,
     Tutorials: TutorialVideos,
     Articles: ArticleFetch,
-    Article: Article
+    Article: ArticleView
   },
   {
     initialRouteName: 'Home',
@@ -39,7 +39,7 @@ const RootStack = createStackNavigator(
       headerStyle: {
         backgroundColor: 'black',
       },
-      headerTintColor: 'black',
+      headerTintColor: 'white',
       headerTitleStyle: {
         fontWeight: 'bold',
         color: 'white',
