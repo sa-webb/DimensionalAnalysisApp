@@ -1,8 +1,8 @@
 # DASH (Dimensional Analysis Student Helper)
 
-DASH's **client** is an iOS mobile app built with React Native using the [Expo](https://expo.io/) toolkit.  
+**Client** is an iOS mobile app built with [React Native](https://facebook.github.io/react-native/) using the [Expo](https://expo.io/) toolkit.  
 
-DASH's **server** stack contains [Node.js](https://nodejs.org/en/) [Express](https://expressjs.com/) middleware and an [MLab](https://mlab.com/) [MongoDB](https://www.mongodb.com/) instance.
+**Server** stack contains [Node.js](https://nodejs.org/en/) [Express](https://expressjs.com/) middleware and an [MLab](https://mlab.com/) [MongoDB](https://www.mongodb.com/) instance.
 
 ## Getting Started
 
