@@ -5,7 +5,6 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 import InputBar from '../../components/InputBar';
 import Submit from '../../components/Submit';
-import NextPrev from '../../components/ButtonRow';
 export default class LearnExample extends Component {
 
   static navigationOptions = {

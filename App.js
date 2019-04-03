@@ -6,7 +6,6 @@ import { createStackNavigator, createAppContainer, createSwitchNavigator } from 
 import GuideScreen from './views/GuideScreen';
 import TutorialVideos from './views/TutorialVideos';
 import PlayScreen from './views/PlayScreen';
-import PracticeScreen from './views/PracticeScreen';
 import ReferenceScreen from './views/ReferenceScreen';
 import HomeScreen from './views/HomeScreen';
 
@@ -28,7 +27,6 @@ const RootStack = createStackNavigator(
     LearnOne: LearnExample,
     LearnTwo: LearnExampleTwo,
     Play: PlayScreen,
-    Practice: PracticeScreen,
     Reference: ReferenceScreen,
     Tutorials: TutorialVideos,
     Articles: ArticleFetch,
