@@ -4,4 +4,5 @@
 
 1. Clone the repository `git clone https://github.com/sa-webb/DimensionalAnalysisApp.git`
 2. Install Dependencies `yarn install`
-3. Start the server `node server.js`
+3. Start the server `node server/server.js`
+4. Start expo `yarn start`
