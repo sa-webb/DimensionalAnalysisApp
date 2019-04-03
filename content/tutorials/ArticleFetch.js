@@ -50,7 +50,12 @@ export default class ArticleFetch extends React.Component {
                   <TouchableOpacity
                      key = {item._id}
                      style = {styles.container}
-                     onPress = {() => this.props.navigation.navigate('Article')}>
+                     onPress = {() => this.props.navigation.navigate('Article', {
+                        itemId: item._id,
+                        title: item.title,
+                        subtitle: item.subtitle,
+                        content: item.content,
+                     })}>
                      <Text style = {styles.text}>
                         {item.title}
                      </Text>

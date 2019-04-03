@@ -5,7 +5,8 @@ export default class Article extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { isLoading: true }
+        this.state = { isLoading: true,
+        id: 0 }
     }
 
     async componentDidMount() {
@@ -35,28 +36,38 @@ export default class Article extends React.Component {
                 </View>
             )
         }
-
+        const { navigation } = this.props;
+        const itemId = navigation.getParam('itemId', 'NO-ID');
+        const title = navigation.getParam('title', 'some default value');
+        const subtitle = navigation.getParam('subtitle', 'some default value');
+        const content = navigation.getParam('content', 'some default value');
         return (
             <View>
-            {
-               this.state.dataSource.map((item, index) => (
-                  <View
-                     key = {item._id}
-                     style = {styles.container}
-                     onPress = {() => this.props.navigation.navigate('Article')}>
-                     <Text style = {styles.titleContainer}>
-                        {item.title}
-                     </Text>
-                     <Text style = {styles.subtitleContainer}>
-                        {item.subtitle}
-                     </Text>
-                     <Text style = {styles.contentContainer}>
-                        {item.content}
-                     </Text>
-                  </View>
-               ))
-            }
-         </View>
+                <Text style={styles.titleContainer}>{title}</Text>
+                <Text style={styles.subtitleContainer}>{subtitle}</Text>
+                <Text style={styles.contentContainer}>{content}</Text>
+            </View>
+        //     <View>
+        //     {
+        //        this.state.dataSource.map((item, index) => (
+        //           <View
+        //              key = {item._id}
+        //              style = {styles.container}
+        //              onPress = {() => this.props.navigation.navigate('Article')}>
+        //              <Text style = {styles.titleContainer}>
+        //                 {item.title}
+        //              </Text>
+        //              <Text>itemId: {JSON.stringify(itemId)}</Text>
+        //              <Text style = {styles.subtitleContainer}>
+        //                 {item.subtitle}
+        //              </Text>
+        //              <Text style = {styles.contentContainer}>
+        //                 {item.content}
+        //              </Text>
+        //           </View>
+        //        ))
+        //     }
+        //  </View>
         );
 
         // return (
