@@ -12,26 +12,19 @@ export default class ArticleFetch extends React.Component {
         this.state = { isLoading: true }
     }
 
-    _onPressArticle() {
-        () => this.props.navigation.navigate('Article');
-    }
-
-    componentDidMount() {
-        return fetch('http://localhost:5000/articles')
-          .then((response) => response.json())
-          .then((responseJson) => {
-    
+    async componentDidMount() {
+        try {
+            const response = await fetch('http://localhost:5000/articles');
+            const responseJson = await response.json();
             this.setState({
-              isLoading: false,
-              dataSource: responseJson.articles,
-            }, function(){
-                
+                isLoading: false,
+                dataSource: responseJson.articles,
+            }, function () {
             });
-    
-          })
-          .catch((error) =>{
+        }
+        catch (error) {
             console.error(error);
-          });
+        }
       }
 
     render() {
@@ -66,19 +59,6 @@ export default class ArticleFetch extends React.Component {
         );
     }
 }
-
-/**
- * <View style={{ flex: 1, paddingTop: 50 }}>
-
-                <Text>Articles </Text>
-
-                <FlatList
-                    data={this.state.dataSource}
-                    renderItem={({ item }) => <Text>{item._id}, {item.title}, {item.subtitle}, {item.image}, {item.content}</Text>}
-                    keyExtractor={({ _id }, index) => _id}
-                />
-            </View>
- */
 
 const styles = StyleSheet.create ({
     container: {
