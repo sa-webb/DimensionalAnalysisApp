@@ -11,11 +11,7 @@ export default class ReferenceScreen extends Component {
         title: 'REFERENCES',
     };
 
-    _onPressButton() {
-        () => this.props.navigation.navigate('Home');
-    }
-
-    render() {
+        render() {
         return (
             <ScrollView style={styles.contentContainer}>
                 <View style={styles.container}>

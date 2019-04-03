@@ -48,7 +48,7 @@ export default class HomeScreen extends Component {
             </TouchableHighlight>
   
             {/*Learn Button*/}
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnOne') }>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('Articles') }>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Learn</Text>
               </View>
