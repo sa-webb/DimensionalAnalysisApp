@@ -8,10 +8,8 @@ const article = require('./routes/article.route');
 let dev_db_url = 'mongodb://austin:capstone3@ds341825.mlab.com:41825/articles';
 
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
-const config = {
-    autoIndex: false,
-    useNewUrlParser: true,
-  };
+
+const config = { autoIndex: false, useNewUrlParser: true };
 
 mongoose.connect(mongoDB, config);
 mongoose.Promise = global.Promise;
