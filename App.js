@@ -14,7 +14,6 @@ import ArticleFetch from './content/tutorials/ArticleFetch';
 import ArticleView from './content/tutorials/ArticleView';
 
 // Quiz screens
-import Quiz from './content/questions/Quiz';
 import LearnExample from './content/questions/LearnExample';
 import LearnExampleTwo from './content/questions/LearnExampleTwo';
 
@@ -29,7 +28,6 @@ const RootStack = createStackNavigator(
     Tutorials: TutorialVideos,
     Articles: ArticleFetch,
     Article: ArticleView,
-    Quiz: Quiz,
   },
   {
     initialRouteName: 'Home',

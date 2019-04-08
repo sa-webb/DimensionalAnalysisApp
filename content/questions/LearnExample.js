@@ -15,7 +15,7 @@ export default class LearnExample extends Component {
   buttonClickListener = () => {
       const { TextInputValue }  = this.state ;
       if (TextInputValue == 1){
-        Alert.alert(TextInputValue + " is the correct anser!");
+        Alert.alert(TextInputValue + " is the correct answer!");
         
       }
       else {
