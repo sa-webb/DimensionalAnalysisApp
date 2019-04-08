@@ -19,8 +19,8 @@ export default class ArticleFetch extends React.Component {
             this.setState({
                 isLoading: false,
                 dataSource: responseJson.articles,
-            }, function () {
             });
+
         }
         catch (error) {
             console.error(error);

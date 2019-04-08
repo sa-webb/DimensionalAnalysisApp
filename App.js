@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Button, Text, View, Image, ScrollView, StatusBar, TouchableHighlight, Linking } from 'react-native';
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 // Static Screens
 import GuideScreen from './views/GuideScreen';
@@ -14,11 +14,9 @@ import ArticleFetch from './content/tutorials/ArticleFetch';
 import ArticleView from './content/tutorials/ArticleView';
 
 // Quiz screens
+import Quiz from './content/questions/Quiz';
 import LearnExample from './content/questions/LearnExample';
 import LearnExampleTwo from './content/questions/LearnExampleTwo';
-
-//import RootStackk from './config/Navigation';
-// import AppContainer from './config/Navigation';
 
 const RootStack = createStackNavigator(
   {
@@ -30,7 +28,8 @@ const RootStack = createStackNavigator(
     Reference: ReferenceScreen,
     Tutorials: TutorialVideos,
     Articles: ArticleFetch,
-    Article: ArticleView
+    Article: ArticleView,
+    Quiz: Quiz,
   },
   {
     initialRouteName: 'Home',

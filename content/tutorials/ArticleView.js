@@ -34,12 +34,10 @@ export default class ArticleView extends React.Component {
             )
         }
         const { navigation } = this.props;
-        const title = navigation.getParam('title', 'some default value');
         const subtitle = navigation.getParam('subtitle', 'some default value');
         const content = navigation.getParam('content', 'some default value');
         return (
             <View>
-                <Text style={styles.titleContainer}>{title}</Text>
                 <Text style={styles.subtitleContainer}>{subtitle}</Text>
                 <Text style={styles.contentContainer}>{content}</Text>
             </View>
@@ -66,6 +64,7 @@ const styles = StyleSheet.create ({
     subtitleContainer: {
         textAlign: 'center',
         fontSize: 24,
+        fontWeight: 'bold',
         color: 'black',
         paddingHorizontal: 12,
         paddingVertical: 8,

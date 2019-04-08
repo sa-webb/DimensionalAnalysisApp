@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TouchableOpacity, TouchableHighlight, Platform, Button, StyleSheet, Text, View, TextInput, Alert, Image } from "react-native";
 
-export default class LearnExample extends Component {
+export default class Quiz extends Component {
     static navigationOptions = {
         title: 'PROBLEM ONE',
       };
@@ -99,6 +99,9 @@ const styles = StyleSheet.create({
         height: 50,
         backgroundColor: 'blue',
         justifyContent: 'center',
+        borderRadius: 4,
+        borderWidth: 1.5,
+
       },
     button2: {
       width: 250,

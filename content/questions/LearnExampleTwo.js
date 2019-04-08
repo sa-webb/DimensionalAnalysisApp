@@ -1,57 +1,49 @@
 import React, { Component } from 'react';
-import { FlatList, StyleSheet, Text, ScrollView, Image, View, TouchableHighlight } from 'react-native';
+import { TouchableOpacity, FlatList, StyleSheet, Text, Image, View, TextInput, TouchableHighlight } from 'react-native';
 
-{/*This allows you to bold like you do in HTML*/}
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
+import InputBar from '../../components/InputBar';
+import Submit from '../../components/Submit';
 export default class LearnExampleTwo extends Component {
 
   static navigationOptions = {
     title: 'PROBLEM TWO',
-};
+  };
 
   render() {
-
     return (
+      <View style={styles.container}>
 
-      <ScrollView style={styles.contentContainer}>
+        <Image source={require('../../assets/PracticeQuestion.png')}
+          style={{ width: 375 }}
+          resizeMode="contain"
+        />
 
-        <View style={styles.container}>
+        <InputBar/>
 
-          <Text style={{color: 'white', fontSize: 15, textAlign: 'center'}}>
-            Click <B>Next Step</B> to step through each process of solving this problem,
-            or <B>Previous Step</B> to see a prior step in solving this problem.
-          </Text>
+        <Submit/>
 
-          <Image source={require('../../assets/PracticeQuestion.png')}
-            style={{ width: 350 }}
-            resizeMode="contain"
-          />
-
-          <View style ={buttonrow.button}>
-           
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-              <View style={buttonStyles.button2}>
-                <Text style={buttonStyles.Text}>{"<< Previous"}</Text>
+        {/* <NextPrev/> */}
+        <View style={styles.parentContainer}>
+              <View style={styles.buttonContainer}>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('LearnOne') }>
+                    <Text style={{ fontSize: 28, color: 'white' }}>      Previous</Text>
+                </TouchableOpacity>
               </View>
-            </TouchableHighlight>
 
-            
-            <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-              <View style={buttonStyles.button2}>
-                <Text style={buttonStyles.Text}>{"Next >>"}</Text>
+              <View>
+                  <Text style={styles.blankText}>spaces</Text>
               </View>
-            </TouchableHighlight>
+
+              <View style={styles.nextContainer}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Home')}>
+                    <Text style={{ fontSize: 28, color: 'white' }}>         Next</Text>
+                </TouchableHighlight>
+            </View>
           </View>
 
-          {/*Return to Main Menu Button*/}
-          <TouchableHighlight onPress={() => this.props.navigation.navigate('Home') }>
-            <View style={buttonStyles.button}>
-              <Text style={buttonStyles.buttonText}>Return to Main Menu</Text>
-            </View>
-          </TouchableHighlight>
-        </View>
-      </ScrollView>
+      </View>
     );
   }
 }
@@ -60,8 +52,7 @@ const styles = StyleSheet.create({
   container: {
    flex: 1,
    alignItems: 'center',
-   backgroundColor: 'black',
-   paddingTop: 22,
+   backgroundColor: 'white',
   },
   item: {
     padding: 40,
@@ -69,44 +60,67 @@ const styles = StyleSheet.create({
     fontSize: 24,
     height: 44,
   },
-  contentContainer: {
-      paddingVertical: 10,
-      backgroundColor: 'black',
-  }
-})
-
-const buttonStyles = StyleSheet.create({
+  buttonrow: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'green',
+    
+  },
   button: {
-    marginBottom: 30,
+    marginBottom: 10,
     width: 260,
     alignItems: 'center',
+    backgroundColor: 'blue'
+  },
+  button2: {
+    width: 250,
+    height: 35,
+    marginTop: 50,
+    padding: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'blue'
+  },
+  submitButton: {
+    width: 150,
+    height: 35,
+    marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'blue'
   },
   buttonText: {
     fontSize: 20,
     padding: 20,
-    color: 'white'
+    color: 'white',
+    textAlign: 'center'
   },
   Text: {
     fontSize: 20,
-    padding: 20,
-    color: 'black'
+    color: 'white',
+    textAlign: 'center'
   },
-  button2: {
-    marginBottom: 5,
-    width: 175,
+  parentContainer: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+},
+buttonContainer: {
+    width: 175,
+    height: 46,
+    backgroundColor: 'blue',
     justifyContent: 'center',
-    backgroundColor: 'gold'
-  },
-});
-
-const buttonrow = StyleSheet.create({
-  button: {
-  flexDirection: 'row',
-  marginTop: 10,
-  justifyContent: 'space-between',
-  padding: 10,
-  backgroundColor: 'white',
+},
+nextContainer: {
+    width: 175,
+    height: 46,
+    backgroundColor: 'blue',
+    justifyContent: 'center',
+},
+blankText: {
+    color: 'white',
 }
 });

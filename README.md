@@ -2,7 +2,7 @@
 
 **Client** is an iOS mobile app built with [React Native](https://facebook.github.io/react-native/) using the [Expo](https://expo.io/) toolkit.  
 
-**Server** stack contains [Node.js](https://nodejs.org/en/) [Express](https://expressjs.com/) middleware and an [MLab](https://mlab.com/) [MongoDB](https://www.mongodb.com/) instance.
+**Server** stack contains [Node.js](https://nodejs.org/en/), [Express](https://expressjs.com/) middleware and a [MongoDB](https://www.mongodb.com/) instance hosted by [MLab](https://mlab.com/).
 
 ## Getting Started
 
