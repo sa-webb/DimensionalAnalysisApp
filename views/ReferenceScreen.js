@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, ScrollView, Text, StyleSheet, Button, TouchableHighlight} from 'react-native';
+import { View, Image, ScrollView, Text, StyleSheet, Button, TouchableHighlight, Linking} from 'react-native';
 import Home from '../App.js'
 
 {/*This allows you to bold like you do in HTML*/}
@@ -14,6 +14,11 @@ export default class ReferenceScreen extends Component {
         render() {
         return (
             <ScrollView style={styles.contentContainer}>
+                <TouchableHighlight onPress={() => Linking.openURL('https://www.youtube.com/watch?v=DsTg1CeWchc') }>
+                <View style={buttonStyles.button}>
+                    <Text style={styles.buttonText}>Coversion Factor Video</Text>
+                </View>
+                </TouchableHighlight>
                 <View style={styles.container}>
                     <Text style={styles.subtitleContainer}>
                         <B>Length</B>
@@ -179,7 +184,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     button: {
-        marginBottom: 50,
+        paddingLeft: 50,
+        marginBottom: 30,
         width: 260,
         alignItems: 'center',
         backgroundColor: 'white',
@@ -187,7 +193,7 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     buttonText: {
-        padding: 20,
+        padding: 28,
         color: 'white'
     },
 
@@ -198,7 +204,7 @@ const buttonStyles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: 'blue'
+    backgroundColor: 'black'
   },
   buttonText: {
     fontSize: 20,

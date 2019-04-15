@@ -25,7 +25,8 @@ export default class PlayScreen extends Component {
         <Text> </Text>
 
         <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
-          <B>**INSERT CALL TO 2D GAME PLATFORMER HERE**</B>
+          <B>For the supplemental educational game, we utilize the Unity Remote iPhone app. This app can be downloaded here: </B>
+          https://itunes.apple.com/us/app/unity-remote-5/id871767552?mt=8
         </Text>
 
 
