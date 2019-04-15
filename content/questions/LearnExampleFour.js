@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { TouchableOpacity, TouchableHighlight, Platform, Button, StyleSheet, Text, View, TextInput, Alert, Image } from "react-native";
 
-export default class LearnExample extends Component {
+export default class LearnExampleFour extends Component {
     static navigationOptions = {
-        title: 'PROBLEM ONE',
+        title: 'PROBLEM FOUR',
       };
   constructor(props) {
       super(props)
@@ -25,7 +25,7 @@ export default class LearnExample extends Component {
   render() {
     return (
     <View style={styles.container}>
-        <Image source={require('../../assets/QuestionOne.png')}
+        <Image source={require('../../assets/QuestionFour.png')}
           style={{ width: 375 }}
           resizeMode="contain"
         />
@@ -47,7 +47,7 @@ export default class LearnExample extends Component {
 
         <View style={styles.parentContainer}>
           <View style={styles.buttonContainer}>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('LearnTwo') }>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('LearnThree') }>
                     <Text style={{ fontSize: 28, color: 'white' }}>      Previous</Text>
             </TouchableOpacity>
               </View>
@@ -57,7 +57,7 @@ export default class LearnExample extends Component {
               </View>
 
               <View style={styles.nextContainer}>
-                <TouchableHighlight onPress={() => this.props.navigation.navigate('LearnTwo')}>
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Home')}>
                     <Text style={{ fontSize: 28, color: 'white' }}>         Next</Text>
                 </TouchableHighlight>
             </View>
