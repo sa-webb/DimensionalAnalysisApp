@@ -16,6 +16,8 @@ import ArticleView from './content/tutorials/ArticleView';
 // Quiz screens
 import LearnExample from './content/questions/LearnExample';
 import LearnExampleTwo from './content/questions/LearnExampleTwo';
+import LearnExampleThree from './content/questions/LearnExampleThree';
+import LearnExampleFour from './content/questions/LearnExampleFour';
 
 const RootStack = createStackNavigator(
   {
@@ -23,6 +25,8 @@ const RootStack = createStackNavigator(
     Guide: GuideScreen,
     LearnOne: LearnExample,
     LearnTwo: LearnExampleTwo,
+    LearnThree: LearnExampleThree,
+    LearnFour: LearnExampleFour,
     Play: PlayScreen,
     Reference: ReferenceScreen,
     Tutorials: TutorialVideos,
