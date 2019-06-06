@@ -26,9 +26,13 @@ export default class PlayScreen extends Component {
 
         <Text style={{color: 'white', fontSize: 20, textAlign: 'center'}}>
           <B>For the supplemental educational game, we utilize the Unity Remote iPhone app. This app can be downloaded here: </B>
-          https://itunes.apple.com/us/app/unity-remote-5/id871767552?mt=8
         </Text>
 
+        <TouchableHighlight onPress={() => Linking.openURL('https://itunes.apple.com/us/app/unity-remote-5/id871767552?mt=8') }>
+                <View style={buttonStyles.button}>
+                    <Text style={styles.buttonText}>Coversion Factor Video</Text>
+                </View>
+        </TouchableHighlight>
 
         <Text></Text>
         <Text></Text>
